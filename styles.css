@@ -1,379 +1,416 @@
+/* Reset and Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
 }
 
 body {
-    min-height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden; /* Hide horizontal scroll */
 }
 
+/* Header Styles */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 100px;
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
 .logo {
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .navbar a {
-    position: relative;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 400;
-    text-decoration: none;
-    margin-left: 40px;
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  margin-left: 40px;
 }
 
 .navbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: .3s;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: .3s;
 }
 
 .navbar a:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
+/* Hero Section Styles */
 .container {
-    height: 100vh;
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px; /* Center the container and limit its width */
+  height: 100vh;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px; /* Center the container and limit its width */
 }
 
 .container img {
-    width: 55%; /* Increased the image size */
-    max-width: 350px; /* Adjusted maximum width */
-    height: auto;
+  width: 55%; /* Increased the image size */
+  max-width: 350px; /* Adjusted maximum width */
+  height: auto;
 }
 
 .hero-text {
-    width: 45%; /* Adjusted to balance with image */
+  width: 45%; /* Adjusted to balance with image */
 }
 
 .hero-text h1 {
-    font-size: 3.3rem;
-    margin-bottom: 12px;
-    color: black;
+  font-size: 3.3rem;
+  margin-bottom: 12px;
+  color: black;
 }
 
 .hero-text p {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
 }
 
+/* About Us Section Styles */
 .about-us {
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px; /* Center the about-us section and limit its width */
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px; /* Center the about-us section and limit its width */
 }
 
 .about-text {
-    width: 50%;
+  width: 50%;
 }
 
 .about-text h2 {
-    font-size: 3.3rem;
-    margin-bottom: 12px;
-    color: black;
+  font-size: 3.3rem;
+  margin-bottom: 12px;
+  color: black;
 }
 
 .about-text p {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
 }
 
 .about-us img {
-    width: 55%; /* Increased the image size */
-    max-width: 350px; /* Adjusted maximum width */
-    height: auto;
+  width: 55%; /* Increased the image size */
+  max-width: 350px; /* Adjusted maximum width */
+  height: auto;
 }
 
+/* Button Styles */
 button {
-    padding: 1em 2.1em 1.1em;
-    border-radius: 4px;
-    margin: 8px;
-    border: 2px solid black;
-    background-color: white;
-    color: black;
-    font-weight: 800;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    text-align: center;
-    box-shadow: 0em 0.3rem 0em #adadad;
-    transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  padding: 1em 2.1em 1.1em;
+  border-radius: 4px;
+  margin: 8px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-weight: 800;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0em 0.3rem 0em #adadad;
+  transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
 }
 
 button:hover {
-    transform: scale(0.95);
-}
-
-.our-services {
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px; /* Center the our-services section and limit its width */
-    margin-top: 50px; /* Add space above the section */
-}
-
-.center-heading {
-    text-align: center;
-    font-size: 3.3rem; 
-    margin-top: 0;
-    margin-bottom: 2rem; /* Adjusted margin to create space below heading */
-}
-
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.service {
-    background-color: #fff;
-    border: 2px solid #000;
-    border-radius: 5px;
-    text-align: center;
-    padding: 2rem;
-    box-shadow: 0em 0.4rem 0em #adadad;
-    transition: transform 0.3s ease;
-    flex: 1 1 calc(33.333% - 20px); /* Three services per row */
-    max-width: calc(33.333% - 20px); /* Adjust for gap */
-    box-sizing: border-box;
-}
-
-.service:hover {
-    transform: scale(1.05);
-}
-
-.plan h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.service p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.our-plans {
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px; /* Center the our-plans section and limit its width */
-    margin-top: 50px; /* Add space above the section */
-}
-
-.plans-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.plan {
-    padding: 2rem;
-    background-color: #fff;
-    border: 2px solid #000;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0em 0.4rem 0em #adadad;
-    flex: 1; /* Flex property for equal width */
-}
-
-.plan h3 {
-    font-size: 2rem;
-    margin-bottom: 12px;
-}
-
-.plan p {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-}
-
-.price {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 12px;
+  transform: scale(0.95);
 }
 
 .about-button {
-    padding: 1em 2.1em 1.1em;
-    border-radius: 4px;
-    margin: 8px;
-    border: 2px solid black;
-    background-color: white;
-    color: black;
-    font-weight: 800;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    text-align: center;
-    box-shadow: 0em 0.3rem 0em #adadad;
-    transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  padding: 1em 2.1em 1.1em;
+  border-radius: 4px;
+  margin: 8px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-weight: 800;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0em 0.3rem 0em #adadad;
+  transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
 }
 
 .about-button:hover {
-    transform: scale(1.05); /* Slightly scale up the button on hover */
+  transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+
+/* Our Services Section Styles */
+.our-services {
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; /* Center the our-services section and limit its width */
+  margin-top: 50px; /* Add space above the section */
 }
 
 .center-heading {
-    text-align: center;
-    font-size: 3.3rem; 
-    margin-bottom: 2rem; /* Adjusted margin to create space below heading */
+  text-align: center;
+  font-size: 3.3rem; 
+  margin-bottom: 2rem; /* Adjusted margin to create space below heading */
 }
 
-/* Existing styles... */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
 
+.service {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 0em 0.4rem 0em #adadad;
+  transition: transform 0.3s ease;
+  flex: 1 1 calc(33.333% - 20px); /* Three services per row */
+  max-width: calc(33.333% - 20px); /* Adjust for gap */
+  box-sizing: border-box;
+}
+
+.service:hover {
+  transform: scale(1.05);
+}
+
+.service h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Our Plans Section Styles */
+.our-plans {
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; /* Center the our-plans section and limit its width */
+  margin-top: 50px; /* Add space above the section */
+}
+
+.plans-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.plan {
+  padding: 2rem;
+  background-color: #fff;
+  border: 2px solid #000;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0em 0.4rem 0em #adadad;
+  flex: 1; /* Flex property for equal width */
+}
+
+.plan h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.plan p {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* Gallery Section Styles */
 .gallery {
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
-  }
-  
-  .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .gallery-item:hover img {
-    transform: scale(1.1);
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: left;
-  }
-  
-  .gallery-item:hover .overlay {
-    opacity: 1;
-  }
-  
-  .view-more-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .view-more-button {
-    padding: 1em 2.1em 1.1em;
-    border-radius: 4px;
-    margin: 8px;
-    border: 2px solid black;
-    background-color: white;
-    color: black;
-    font-weight: 800;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    text-align: center;
-    box-shadow: 0em 0.3rem 0em #adadad;
-    transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  }
-  
-  .view-more-button:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Our Clients section */
-  .our-clients {
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
-  }
-  
-  .clients-container {
-    display: flex;
-    width: calc(100% * 2);
-    animation: slide 15s linear infinite;
-  }
-  
-  .client-logo {
-    flex: 1 0 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .client-logo img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  @keyframes slide {
-    0% {
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: left;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.view-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-more-button {
+  padding: 1em 2.1em 1.1em;
+  border-radius: 4px;
+  margin: 8px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-weight: 800;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0em 0.3rem 0em #adadad;
+  transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.view-more-button:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: transparent;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  min-width: 800px;
+  min-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Our Clients Section Styles */
+.our-clients {
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.clients-container {
+  display: flex;
+  width: calc(100% * 2);
+  animation: slide 15s linear infinite;
+}
+
+.client-logo {
+  flex: 1 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes slide {
+  0% {
       transform: translateX(0%);
-    }
-    100% {
+  }
+  100% {
       transform: translateX(-50%);
-    }
   }
-  
-  /* General styles... */
-  
-  .footer {
-    padding: 20px;
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .footer p {
-    margin: 0;
-    font-size: 1rem;
-  }
-  
+}
+
+/* Footer Styles */
+.footer {
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
