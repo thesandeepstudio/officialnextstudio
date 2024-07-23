@@ -1,0 +1,128 @@
+/* responsive.css */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-us img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .modal-content {
+        width: 95%;
+        min-width: 0;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 5px;
+    }
+
+    .navbar a {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .container img {
+        max-width: 250px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.2rem;
+    }
+
+    .service {
+        padding: 1rem;
+    }
+
+    .plan {
+        padding: 1rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
