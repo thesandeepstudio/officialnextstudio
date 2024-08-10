@@ -562,7 +562,7 @@ button:hover {
   bottom: -10px; /* Position below the heading */
   height: 2px; /* Thickness of the underline */
   width: 50px; /* Width of the underline */
-  background-color: #adff2f; /* Green accent color for the underline */
+  background-color: #fff; /* Green accent color for the underline */
 }
 
 /* Quick Links and Contact Styling */
