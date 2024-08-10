@@ -1,37 +1,33 @@
 // script.js
 
-var modal = document.getElementById('modal');
-var hamburger = document.querySelector('.hamburger');
-var navLinks = document.querySelector('.nav-links');
+// Select elements
+const modal = document.getElementById('modal');
+const hamburger = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
 
 // Toggle the navigation menu
-hamburger.addEventListener('click', function() {
-    if (navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
-    } else {
-        navLinks.style.display = 'flex';
-    }
-    // Prevent horizontal scrolling when nav-links are visible
-    document.body.style.overflowX = navLinks.style.display === 'flex' ? 'hidden' : 'auto';
+hamburger.addEventListener('click', () => {
+    const isVisible = navLinks.classList.toggle('active');
+    document.body.style.overflowX = isVisible ? 'hidden' : 'auto';
 });
 
 // When the user clicks on a gallery item, open the modal
-document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', function() {
-        var details = this.getAttribute('data-details');
+document.addEventListener('click', event => {
+    if (event.target.closest('.gallery-item')) {
+        const details = event.target.closest('.gallery-item').getAttribute('data-details');
         document.getElementById('modal-details').innerHTML = getDetailsContent(details);
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden'; // Prevent body scrolling
-    });
+    }
 });
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+window.addEventListener('click', event => {
+    if (event.target === modal) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto'; // Re-enable body scrolling
     }
-}
+});
 
 // Function to get the details content based on the data-details attribute
 function getDetailsContent(details) {

@@ -14,6 +14,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -21,9 +22,9 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  height: 10px;
+  height: 60px;
   width: 100%;
-  padding: 20px 100px;
+  padding: 10px 50px;
   background: #000;
   display: flex;
   justify-content: space-between;
@@ -43,6 +44,16 @@ html {
   width: 30px; /* Adjust the size of the logo image */
   height: auto;
   margin-right: 8px; /* Space between the image and the text */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
@@ -67,6 +78,20 @@ html {
 
 .navbar a:hover::before {
   width: 100%;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 /* Hero Section Styles */
@@ -591,3 +616,127 @@ button:hover {
   margin: 0;
   font-size: 1rem;
 }
+
+
+
+
+
+
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px; /* Adjust padding */
+  }
+
+  .logo-image {
+    width: 20px; /* Adjust logo size */
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .container {
+    flex-direction: column; /* Stack image and text vertically */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .container img {
+    width: 100%; /* Full width of container */
+    max-width: none; /* Remove max-width */
+  }
+
+  .hero-text {
+    width: 100%; /* Full width of container */
+    text-align: center; /* Center-align text */
+  }
+
+  .about-us {
+    flex-direction: column; /* Stack image and text vertically */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .about-us img {
+    width: 100%; /* Full width of container */
+    max-width: none; /* Remove max-width */
+  }
+
+  .about-text {
+    width: 100%; /* Full width of container */
+    text-align: center; /* Center-align text */
+  }
+
+  .services-container,
+  .plans-container {
+    flex-direction: column; /* Stack services and plans vertically */
+    gap: 15px;
+  }
+
+  .service,
+  .plan {
+    flex: 1 1 100%; /* Full width for each service/plan */
+    max-width: none; /* Remove max-width */
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust grid columns */
+  }
+
+  .modal-content {
+    width: 90%;
+    min-width: 280px; /* Ensure modal is responsive on small screens */
+  }
+
+  .contact h1 {
+    font-size: 2rem; /* Adjust heading font size */
+  }
+
+  .contact p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  .social-links-footer a img {
+    width: 20px; /* Adjust icon size */
+    height: 20px; /* Adjust icon size */
+  }
+
+  .our-clients {
+    padding: 10px; /* Add padding around the clients section */
+  }
+
+  .client-logo {
+    flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 150px; /* Ensures logos do not exceed this width */
+    margin: 0 auto; /* Centers each logo within its container */
+  }
+  
+
+  .client-logo {
+    flex: 1 1 150px; /* Set a base size for client logos */
+    max-width: 150px; /* Set a maximum width for client logos */
+    margin: 0 auto; /* Center-align each logo */
+  }
+}
+
