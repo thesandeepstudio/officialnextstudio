@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Meta Information -->
   <meta charset="UTF-8">
@@ -15,37 +14,33 @@
   <!-- Main and Responsive CSS files -->
   <link rel="stylesheet" href="styles.css">
 
-
-
   <!-- Favicon link -->
   <link rel="icon" href="Image/Logo/White.png" type="image/x-icon">
   <link rel="shortcut icon" href="Image/Logo/White.png" type="image/x-icon">
 </head>
-
 <body>
   <!-- Header Section -->
-<header class="header">
-  <a href="#" class="logo">
-    <img src="Image/Logo/White.png" alt="NEXT STUDIO Logo" class="logo-image">
-    NEXT STUDIO
-  </a>
-  <nav class="navbar">
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about-us">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#our-plans">Plan</a>
-      <a href="#what-we-offer">Services</a>
-      <a href="#contact">Contact</a> <!-- Updated -->
-    </div>
-    <div class="hamburger-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-  </nav>
-</header>
-
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="Image/Logo/White.png" alt="NEXT STUDIO Logo" class="logo-image">
+      NEXT STUDIO
+    </a>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about-us">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#our-plans">Plan</a>
+        <a href="#what-we-offer">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
 
   <!-- Main Content -->
   <main>
@@ -127,20 +122,20 @@
     <section id="gallery" class="gallery">
       <h2 class="center-heading">Our Gallery</h2>
       <div class="gallery-container">
-        <div class="gallery-item" title="Sample Image 1" data-details="details1">
-          <img src="Image/img/sample1.png" alt="Sample Image 1">
+        <div class="gallery-item" onclick="showDetails('details1')">
+          <img src="Image/img/sample2.jpg" alt="Sample Image 1">
           <div class="overlay">Drool Nepal</div>
         </div>
-        <div class="gallery-item" title="Sample Image 2" data-details="details2">
-          <img src="Image/img/sample2.jpg" alt="Sample Image 2">
+        <div class="gallery-item" onclick="showDetails('details2')">
+          <img src="Image/img/sample1.png" alt="Sample Image 2">
           <div class="overlay">Plutus Paradox</div>
         </div>
-        <div class="gallery-item" title="Sample Image 2" data-details="details2">
-          <img src="Image/img/sample4.png" alt="Sample Image 2">
+        <div class="gallery-item" onclick="showDetails('details3')">
+          <img src="Image/img/sample4.png" alt="Sample Image 3">
           <div class="overlay">Apple</div>
         </div>
-        <div class="gallery-item" title="Sample Image 2" data-details="details2">
-          <img src="Image/img/sample5.png" alt="Sample Image 2">
+        <div class="gallery-item" onclick="showDetails('details4')">
+          <img src="Image/img/sample5.png" alt="Sample Image 4">
           <div class="overlay">Urban Crust</div>
         </div>
         <!-- Add more gallery items here -->
@@ -151,10 +146,58 @@
     </section>
 
     <!-- Modal Section -->
-    <div id="modal" class="modal">
+    <div id="details1" class="modal">
       <div class="modal-content">
-        <!-- Close button removed -->
-        <div id="modal-details"></div>
+        <span class="close-btn" onclick="hideDetails('details1')">&times;</span>
+        <div class="modal-description">
+          <h2>Plutus Paradox</h2>
+          <p>Streetwear clothing brand </p>
+        </div>
+        <!-- Images Container -->
+        <div class="images-container">
+          <img src="Image/img/sample2.jpg" alt="Sample 001">
+          <img src="Image/Project/PP/002.jpg" alt="Sample 002">
+          <img src="Image/Project/PP/003.jpg" alt="Sample 003">
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="details2" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="hideDetails('details2')">&times;</span>
+        <div class="modal-description">
+          <h2>Plutus Paradox</h2>
+          <p>Streetwear clothing brand </p>
+        </div>
+        <!-- Images Container -->
+        <div class="images-container">
+          <img src="Image/Project/PP/002.jpg" alt="Sample Image 2a Full">
+          <img src="Image/img/sample1.png" alt="Sample Image 2b Full">
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="details3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="hideDetails('details3')">&times;</span>
+        <img src="Image/img/sample4-full.png" alt="Sample Image 3 Full">
+        <div class="modal-description">
+          <h2>Apple</h2>
+          <p>Details about Apple...</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="details4" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="hideDetails('details4')">&times;</span>
+        <img src="Image/img/sample1.png" alt="Sample Image 4 Full">
+        <div class="modal-description">
+          <h2>Urban Crust</h2>
+          <p>Details about Urban Crust...</p>
+        </div>
       </div>
     </div>
 
@@ -247,6 +290,8 @@
       </div>
     </div>
   </footer>
-</body>
 
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
 </html>

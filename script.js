@@ -1,5 +1,3 @@
-// script.js
-
 // Select elements
 const modal = document.getElementById('modal');
 const hamburger = document.querySelector('.hamburger-menu');
@@ -48,4 +46,13 @@ function getDetailsContent(details) {
         default:
             return '<p>No details available.</p>';
     }
+}
+
+// Functions to show and hide details for specific elements
+function showDetails(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function hideDetails(id) {
+    document.getElementById(id).style.display = 'none';
 }
