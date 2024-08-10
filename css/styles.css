@@ -9,6 +9,11 @@
 body {
   min-height: 100vh;
   overflow-x: hidden; /* Hide horizontal scroll */
+  background-color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Header Styles */
@@ -16,9 +21,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  height: 10px;
   width: 100%;
   padding: 20px 100px;
-  background: #222;
+  background: #191919;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,15 +32,21 @@ body {
 }
 
 .logo {
-  font-size: 20px;
-  color: #fff;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-weight: 600;
+  color: #fff; /* Adjust this color as needed */
+}
+
+.logo-image {
+  width: 40px; /* Adjust the size of the logo image */
+  height: auto;
+  margin-right: 8px; /* Space between the image and the text */
 }
 
 .navbar a {
   position: relative;
-  font-size: 18px;
+  font-size: 12px;
   color: #fff;
   font-weight: 400;
   text-decoration: none;
@@ -81,7 +93,7 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 3.3rem;
+  font-size: 3.0rem;
   margin-bottom: 12px;
   color: black;
 }
@@ -89,6 +101,24 @@ body {
 .hero-text p {
   font-size: 1.4rem;
   margin-bottom: 12px;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8em 1.6em;
+  border-radius: 12px;
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0em 0.3rem 0em #adadad;
+  transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+  transform: scale(0.95);
 }
 
 /* About Us Section Styles */
@@ -128,10 +158,10 @@ body {
 /* Button Styles */
 button {
   padding: 1em 2.1em 1.1em;
-  border-radius: 4px;
+  border-radius: 12px;
   margin: 8px;
   border: 2px solid black;
-  background-color: white;
+  background-color: #fff;
   color: black;
   font-weight: 800;
   font-size: 0.85em;
@@ -147,7 +177,7 @@ button:hover {
 
 .about-button {
   padding: 1em 2.1em 1.1em;
-  border-radius: 4px;
+  border-radius: 12px;
   margin: 8px;
   border: 2px solid black;
   background-color: white;
@@ -189,7 +219,7 @@ button:hover {
 .service {
   background-color: #fff;
   border: 2px solid #000;
-  border-radius: 5px;
+  border-radius: 20px;
   text-align: center;
   padding: 2rem;
   box-shadow: 0em 0.4rem 0em #adadad;
@@ -233,7 +263,7 @@ button:hover {
   background-color: #fff;
   border: 2px solid #000;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0em 0.4rem 0em #adadad;
   flex: 1; /* Flex property for equal width */
 }
@@ -310,7 +340,7 @@ button:hover {
 
 .view-more-button {
   padding: 1em 2.1em 1.1em;
-  border-radius: 4px;
+  border-radius: 12px;
   margin: 8px;
   border: 2px solid black;
   background-color: white;
@@ -391,6 +421,151 @@ button:hover {
   max-width: 100%;
   height: auto;
 }
+
+.contact {
+  background-color: #fff; /* Light background color */
+  padding: 40px 20px; /* Padding around the section */
+  text-align: center; /* Center align text */
+}
+
+.contact-content {
+  max-width: 800px; /* Max width for content */
+  margin: 0 auto; /* Center align content */
+}
+
+.contact h1 {
+  font-size: 2.5em; /* Font size for heading */
+  margin-bottom: 10px; /* Margin below heading */
+}
+
+.contact p {
+  font-size: 1.2em; /* Font size for paragraph */
+  margin-bottom: 20px; /* Margin below paragraph */
+}
+
+.gmail-section {
+  margin-bottom: 20px; /* Margin below Gmail section */
+}
+
+.email-link {
+  font-size: 1.2em; /* Font size for email link */
+  color: #333; /* Text color for email link */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-links {
+  display: flex; /* Flexbox for social links */
+  justify-content: center; /* Center align social links */
+  gap: 15px; /* Space between social links */
+}
+
+.social-link {
+  font-size: 1em; /* Font size for social links */
+  color: #0073e6; /* Color for social links */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+
+/* General Footer Styling */
+.site-footer {
+  background-color: #191919; /* Footer background color */
+  color: #fff; /* Text color */
+  padding: 40px 0; /* Top and bottom padding */
+  font-family: 'Inter', sans-serif; /* Font family */
+}
+
+.footer-container {
+  max-width: 1200px; /* Maximum width of the footer content */
+  margin: 0 auto; /* Centering the footer */
+  padding: 0 20px; /* Left and right padding */
+}
+
+.footer-row {
+  display: flex; /* Flexbox layout for columns */
+  justify-content: space-between; /* Space out columns */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Individual Footer Column Styling */
+.footer-col {
+  flex: 1; /* Flex grow for responsive layout */
+  margin: 10px 20px; /* Margin around each column */
+  min-width: 250px; /* Minimum width for each column */
+  font-weight: 150; /* Light font weight */
+}
+
+.footer-col h4 {
+  font-size: 18px; /* Heading font size */
+  margin-bottom: 20px; /* Space below the heading */
+  position: relative; /* Position for the underline effect */
+  font-weight: bold; /* Bold font for headings */
+}
+
+.footer-col h4::after {
+  content: ''; /* Empty content for the underline effect */
+  position: absolute; /* Positioned relative to the heading */
+  left: 0; /* Align to the left */
+  bottom: -10px; /* Position below the heading */
+  height: 2px; /* Thickness of the underline */
+  width: 50px; /* Width of the underline */
+  background-color: #3eaa17; /* Green accent color for the underline */
+}
+
+/* Quick Links and Contact Styling */
+.footer-col ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.footer-col ul li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.footer-col ul li a {
+  color: #fff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer-col ul li a:hover {
+  color: #87E64B; /* Green accent color on hover */
+}
+
+/* Social Media Icons Styling */
+.social-links {
+  display: flex; /* Flexbox layout for icons */
+  gap: 10px; /* Space between icons */
+}
+
+.social-links a img {
+  width: 24px; /* Icon width */
+  height: 24px; /* Icon height */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.social-links a:hover img {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Footer Bottom Section Styling */
+/* Footer Bottom Section */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #fff;
+  position: relative; /* Ensure footer is positioned relative for centering */
+  width: 100%; /* Full width of the footer */
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
 
 @keyframes slide {
   0% {
