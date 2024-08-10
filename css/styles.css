@@ -24,11 +24,12 @@ html {
   height: 10px;
   width: 100%;
   padding: 20px 100px;
-  background: #191919;
+  background: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  border-bottom: 2px solid black ;
 }
 
 .logo {
@@ -39,7 +40,7 @@ html {
 }
 
 .logo-image {
-  width: 40px; /* Adjust the size of the logo image */
+  width: 30px; /* Adjust the size of the logo image */
   height: auto;
   margin-right: 8px; /* Space between the image and the text */
 }
@@ -456,13 +457,14 @@ button:hover {
 .social-links {
   display: flex; /* Flexbox for social links */
   justify-content: center; /* Center align social links */
-  gap: 15px; /* Space between social links */
+  gap: 25px; /* Space between social links */
+  font-size: 12px;
 }
 
 .social-link {
-  font-size: 1em; /* Font size for social links */
-  color: #0073e6; /* Color for social links */
-  text-decoration: none; /* Remove underline */
+  font-size: 1.5em; /* Font size for social links */
+  color: #000; /* Color for social links */
+  text-decoration: underline; /* Remove underline */
 }
 
 .social-link:hover {
@@ -502,7 +504,7 @@ button:hover {
   font-size: 18px; /* Heading font size */
   margin-bottom: 20px; /* Space below the heading */
   position: relative; /* Position for the underline effect */
-  font-weight: bold; /* Bold font for headings */
+  font-weight: 250;
 }
 
 .footer-col h4::after {
@@ -512,7 +514,7 @@ button:hover {
   bottom: -10px; /* Position below the heading */
   height: 2px; /* Thickness of the underline */
   width: 50px; /* Width of the underline */
-  background-color: #3eaa17; /* Green accent color for the underline */
+  background-color: #adff2f; /* Green accent color for the underline */
 }
 
 /* Quick Links and Contact Styling */
@@ -532,22 +534,22 @@ button:hover {
 }
 
 .footer-col ul li a:hover {
-  color: #87E64B; /* Green accent color on hover */
+  color: #adff2f; /* Green accent color on hover */
 }
 
 /* Social Media Icons Styling */
-.social-links {
+.social-links-footer {
   display: flex; /* Flexbox layout for icons */
-  gap: 10px; /* Space between icons */
+  gap: 30px; /* Space between icons */
 }
 
-.social-links a img {
+.social-links-footer a img {
   width: 24px; /* Icon width */
   height: 24px; /* Icon height */
   transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
-.social-links a:hover img {
+.social-links-footer a:hover img {
   transform: scale(1.1); /* Slightly enlarge icon on hover */
 }
 
