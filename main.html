@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Information -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Studio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Main and Responsive CSS files -->
+  <link rel="stylesheet" href="styles.css">
+
+
+
+  <!-- Favicon link -->
+  <link rel="icon" href="Image/Logo/White.png" type="image/x-icon">
+  <link rel="shortcut icon" href="Image/Logo/White.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="Image/Logo/White.png" alt="NEXT STUDIO Logo" class="logo-image">
+      NEXT STUDIO
+    </a>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about-us">About</a>
+        <a href="#gallery">Gallary</a>
+        <a href="#our-plans">Plan</a>
+        <a href="#what-we-offer">Services</a>
+        <a href="#contact">Contact</a> <!-- Updated -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="container">
+      <img src="Image/SVG/hero.svg" alt="Hero Image">
+      <div class="hero-text">
+        <h1>Next Studio - Endless creativity</h1>
+        <p>A proactive team of designers and developers who love creating brand and digital experiences that matter.</p>
+        <a href="#about-us" class="button">About us</a>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us">
+      <img src="Image/SVG/about.svg" alt="About Us Image">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>We are a group of people passionate about creating great design and development solutions. We combine creativity,
+          technical skills, and teamwork to help our clients reach their goals.</p>
+        <a href="#gallery" class="button">Our Work</a>
+      </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="what-we-offer" class="our-services">
+      <h2 class="center-heading">What We Offer</h2>
+      <div class="services-container">
+        <div class="service">
+          <h3>Graphic Design</h3>
+          <p>We create visual identities, branding, and marketing materials to help your business stand out.</p>
+        </div>
+        <div class="service">
+          <h3>Video Production</h3>
+          <p>We make high-quality videos for marketing, training, and storytelling.</p>
+        </div>
+        <div class="service">
+          <h3>Motion Graphics</h3>
+          <p>We bring designs to life with 2D and 3D animations</p>
+        </div>
+        <div class="service">
+          <h3>Illustration</h3>
+          <p>We create custom illustrations for branding and editorial works.</p>
+        </div>
+        <div class="service">
+          <h3>Web Design</h3>
+          <p>Our user-friendly websites will strike a chord with the eyes of visitors!</p>
+        </div>
+        <div class="service">
+          <h3>UX/UI Design</h3>
+          <p>We focus on creating easy-to-use interfaces that improve user experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Plans Section -->
+    <section id="our-plans" class="our-plans">
+      <h2 class="center-heading">Our Plans</h2>
+      <div class="plans-container">
+        <div class="plan">
+          <h3>Basic Plan</h3>
+          <p>Greater for startups and small projects.</p>
+          <button>Get Started</button>
+        </div>
+        <div class="plan">
+          <h3>Standard Plan</h3>
+          <p>Ideal for growing businesses and mid-sized projects.</p>
+          <button>Get Started</button>
+        </div>
+        <div class="plan">
+          <h3>Premium Plan</h3>
+          <p>Perfect for big businesses and larger projects.</p>
+          <button>Get Started</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <h2 class="center-heading">Our Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery-item" title="Sample Image 1" data-details="details1">
+          <img src="Image/img/sample1.png" alt="Sample Image 1">
+          <div class="overlay">Drool Nepal</div>
+        </div>
+        <div class="gallery-item" title="Sample Image 2" data-details="details2">
+          <img src="Image/img/sample2.jpg" alt="Sample Image 2">
+          <div class="overlay">Plutus Paradox</div>
+        </div>
+        <div class="gallery-item" title="Sample Image 2" data-details="details2">
+          <img src="Image/img/sample4.png" alt="Sample Image 2">
+          <div class="overlay">Apple</div>
+        </div>
+        <div class="gallery-item" title="Sample Image 2" data-details="details2">
+          <img src="Image/img/sample5.png" alt="Sample Image 2">
+          <div class="overlay">Urban Crust</div>
+        </div>
+        <!-- Add more gallery items here -->
+      </div>
+      <div class="view-more-container">
+        <button class="view-more-button">View More</button>
+      </div>
+    </section>
+
+    <!-- Modal Section -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <!-- Close button removed -->
+        <div id="modal-details"></div>
+      </div>
+    </div>
+
+    <!-- Our Clients Section -->
+    <section class="our-clients">
+      <h2 class="center-heading">Our Clients</h2>
+      <div class="clients-container">
+        <div class="client-logo"><img src="Image/Logo/drool.png" alt="Client 1"></div>
+        <div class="client-logo"><img src="Image/Logo/Plutus.png" alt="Client 2"></div>
+        <div class="client-logo"><img src="Image/Logo/apple.png" alt="Client 3"></div>
+        <div class="client-logo"><img src="client4.png" alt="Client 4"></div>
+        <div class="client-logo"><img src="client5.png" alt="Client 5"></div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+      <div class="contact-content">
+        <h1>Let's Talk</h1>
+        <p>Feel free to reach out to us. We are here to help!</p>
+        
+        <!-- Gmail Section -->
+        <div class="gmail-section">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=officialnextstdio@gmail.com" class="social-link" target="_blank">officialnextstdio@gmail.com</a>
+        </div>
+
+        <!-- Social Links Section -->
+        <div class="social-links">
+          <a href="https://www.instagram.com/officialnextstudio/" class="social-link">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61555398989541" class="social-link">Facebook</a>
+          <a href="mailto:officialnextstdio@gmail.com" class="social-link">Gmail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <!-- About Section -->
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <p>We are a freelance design studio based in Kathmandu, Nepal.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="mailto:info@nextstudio.com">officialnextstdio@gmail.com</a></li>
+            <li><a href="tel:+1234567890">+977 9749355345</a></li>
+            <li><a href="#">Kathmandu, Nepal</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links-footer">
+            <a href="https://www.facebook.com/profile.php?id=61555398989541" target="_blank">
+              <img src="social_media_icons/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/officialnextstudio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+              <img src="social_media_icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/officialnextstudio/?viewAsMember=true" target="_blank">
+              <img src="social_media_icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://www.behance.net/nextstudiooffical" target="_blank">
+              <img src="social_media_icons/behance.svg" alt="Behance">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Next Studio. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
