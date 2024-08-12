@@ -347,15 +347,13 @@ button:hover {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   color: #fff;
   padding: 10px;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-
 
 .gallery-item:hover .overlay {
   opacity: 1;
@@ -385,65 +383,73 @@ button:hover {
   transform: scale(1.05);
 }
 
-
-/* Modal Styles */
+/* Modal */
 .modal {
   display: none; /* Hide modals by default */
   position: fixed;
-  z-index: 1;
+  z-index: 1000; /* Ensure modal is on top */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.7); /* Darker transparent background */
 }
 
-
+/* Modal Content */
 .modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 90%; /* Adjust max width for content */
-  max-height: 90vh; /* Adjust max height for content */
+  position: relative;
+  width: 100%;
+  height: 100%;
   padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width/height calculations */
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
   overflow-y: auto;
-  background-color: #fff;
-  border-radius: 10px;
+  border-radius: 10px; /* Optional: Add rounded corners to modal content */
 }
 
+/* Modal Description */
 .modal-description {
-  width: 100%; /* Full width for the description */
-  color: #000; /* Text color */
-  margin-bottom: 10px; /* Space between description and images */
+  width: 100%;
+  color: #fff;
+  margin: 5px 0; /* Reduced top and bottom margin */
+  text-align: center; /* Center align text */
 }
 
+/* Images Container */
 .images-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: calc(100% - 100px); /* Adjust height to fit within the modal */
+  overflow: auto; /* Allow scrolling if content overflows */
 }
 
+/* Image Styling */
 .images-container img {
-  max-width: 100%; /* Prevents image from overflowing horizontally */
-  max-height: 80vh; /* Prevents image from overflowing vertically */
-  object-fit: contain; /* Maintains aspect ratio */
-  margin-bottom: 10px; /* Space between images */
+  width: 80%; /* Set a consistent width for images */
+  max-width: 100%; /* Ensure images do not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+  margin-bottom: 0; /* Remove gap between images */
 }
 
+/* Close Button */
 .close-btn {
   position: absolute;
-  top: 10px;
+  top: 20px; /* Ensure it’s visible and doesn’t overlap content */
   right: 20px;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #000; /* Optional: ensures the close button is visible */
+  color: #fff;
+  z-index: 1100; /* Ensure close button is above other content */
 }
+
+
 
 /* Our Clients Section Styles */
 .our-clients {
@@ -471,6 +477,9 @@ button:hover {
   height: auto;
 }
 
+
+
+/* contact */
 .contact {
   background-color: #fff; /* Light background color */
   padding: 40px 20px; /* Padding around the section */
@@ -519,89 +528,87 @@ button:hover {
   text-decoration: underline; /* Underline on hover */
 }
 
-
-/* General Footer Styling */
+/* General FooterStyling */
 .site-footer {
-  background-color: #191919; /* Footer background color */
-  color: #fff; /* Text color */
-  padding: 40px 0; /* Top and bottom padding */
-  font-family: 'Inter', sans-serif; /* Font family */
+  background-color: #191919;
+  color: #fff;
+  padding: 40px 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
-  max-width: 1200px; /* Maximum width of the footer content */
-  margin: 0 auto; /* Centering the footer */
-  padding: 0 20px; /* Left and right padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-row {
-  display: flex; /* Flexbox layout for columns */
-  justify-content: space-between; /* Space out columns */
-  flex-wrap: wrap; /* Allow wrapping on small screens */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* Individual Footer Column Styling */
 .footer-col {
-  flex: 1; /* Flex grow for responsive layout */
-  margin: 10px 20px; /* Margin around each column */
-  min-width: 250px; /* Minimum width for each column */
-  font-weight: 150; /* Light font weight */
+  flex: 1;
+  margin: 10px 20px;
+  min-width: 250px;
+  font-weight: 150;
 }
 
 .footer-col h4 {
-  font-size: 18px; /* Heading font size */
-  margin-bottom: 20px; /* Space below the heading */
-  position: relative; /* Position for the underline effect */
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
   font-weight: 250;
 }
 
 .footer-col h4::after {
-  content: ''; /* Empty content for the underline effect */
-  position: absolute; /* Positioned relative to the heading */
-  left: 0; /* Align to the left */
-  bottom: -10px; /* Position below the heading */
-  height: 2px; /* Thickness of the underline */
-  width: 50px; /* Width of the underline */
-  background-color: #fff; /* Green accent color for the underline */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 50px;
+  background-color: #fff;
 }
 
 /* Quick Links and Contact Styling */
 .footer-col ul {
-  list-style: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
+  list-style: none;
+  padding: 0;
 }
 
 .footer-col ul li {
-  margin-bottom: 10px; /* Space between list items */
+  margin-bottom: 10px;
 }
 
 .footer-col ul li a {
-  color: #fff; /* Link color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+  color: #fff;
+  text-decoration: none;
+  transition: font-weight 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-  color: #adff2f; /* Green accent color on hover */
+  font-weight: 300;
 }
 
 /* Social Media Icons Styling */
 .social-links-footer {
-  display: flex; /* Flexbox layout for icons */
-  gap: 30px; /* Space between icons */
+  display: flex;
+  gap: 20px;
 }
 
-.social-links-footer a img {
-  width: 24px; /* Icon width */
-  height: 24px; /* Icon height */
-  transition: transform 0.3s ease; /* Smooth scaling effect */
+.social-links-footer img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
 }
 
 .social-links-footer a:hover img {
-  transform: scale(1.1); /* Slightly enlarge icon on hover */
+  transform: scale(1.1);
 }
 
-/* Footer Bottom Section Styling */
 /* Footer Bottom Section */
 .footer-bottom {
   text-align: center;
