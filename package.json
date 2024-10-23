@@ -2,7 +2,7 @@
   "name": "next-web",
   "version": "1.0.0",
   "scripts": {
-    "build": "next build",
+    "build": "gulp build",
     "deploy": "gulp"
   },
   "devDependencies": {

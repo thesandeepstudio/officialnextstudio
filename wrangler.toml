@@ -3,8 +3,10 @@ account_id = "d7ebde6289862484e7ea789d0ab0404f"
 compatibility_date = "2024-10-23"
 workers_dev = true
 
-[build]
-command = "npm run build"
+[[build]]
+command = "npm run build" # or "npx gulp build"
+upload = { "format = "directory", "dir" = "dist" }
+
 
 [env.production]
 account_id = "d7ebde6289862484e7ea789d0ab0404f"
