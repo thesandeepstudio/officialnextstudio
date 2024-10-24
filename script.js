@@ -6,7 +6,17 @@ const navLinks = document.querySelector('.nav-links');
 // Toggle the navigation menu
 hamburger.addEventListener('click', () => {
     const isVisible = navLinks.classList.toggle('active');
-    document.body.style.overflowX = isVisible ? 'hidden' : 'auto';
+
+    // Prevent horizontal scrolling when the menu is open
+    if (isVisible) {
+        document.body.style.overflow = 'hidden'; // Disable scrolling
+        document.body.style.position = 'fixed'; // Keep the body in place
+        document.body.style.width = '100%'; // Maintain full width
+    } else {
+        document.body.style.overflow = ''; // Re-enable scrolling
+        document.body.style.position = ''; // Reset to default position
+        document.body.style.width = ''; // Reset to default width
+    }
 });
 
 // When the user clicks on a gallery item, open the modal
