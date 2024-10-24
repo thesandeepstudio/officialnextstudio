@@ -7,7 +7,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/#about</loc>
+        <loc>https://nextstudio-cyt.pages.dev/#about-us</loc>
         <lastmod>2024-10-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -19,13 +19,13 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/#plans</loc>
+        <loc>https://nextstudio-cyt.pages.dev/#our-plans</loc>
         <lastmod>2024-10-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/#services</loc>
+        <loc>https://nextstudio-cyt.pages.dev/#what-we-offer</loc>
         <lastmod>2024-10-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
