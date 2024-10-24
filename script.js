@@ -19,6 +19,17 @@ hamburger.addEventListener('click', () => {
     }
 });
 
+// Close the navigation menu when clicking outside of it
+document.addEventListener('click', (event) => {
+    if (navLinks.classList.contains('active') && !event.target.closest('.hamburger-menu') && !event.target.closest('.nav-links')) {
+        navLinks.classList.remove('active'); // Remove the active class
+        document.body.style.overflow = ''; // Re-enable scrolling
+        document.body.style.position = ''; // Reset to default position
+        document.body.style.width = ''; // Reset to default width
+    }
+});
+
+
 // When the user clicks on a gallery item, open the modal
 document.addEventListener('click', event => {
     if (event.target.closest('.gallery-item')) {
