@@ -774,13 +774,16 @@ button:hover {
   .client-logo {
     flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
     max-width: 150px; /* Ensures logos do not exceed this width */
-    margin: 0 auto; /* Centers each logo within its container */
+    margin: 10px; 
+    display: flex;/* Centers each logo within its container */
+    justify-content: center;
+    align-items: center;
   }
   
 
   .client-logo {
     flex: 1 1 150px; /* Set a base size for client logos */
-    max-width: 150px; /* Set a maximum width for client logos */
-    margin: 0 auto; /* Center-align each logo */
+    max-width: 150px;
+    padding: 5px;
   }
 }
