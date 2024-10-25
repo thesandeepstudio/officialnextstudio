@@ -1,0 +1,319 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    overflow-x: hidden; /* Hide horizontal scroll */
+    background-color: #fff;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  /* Header Styles */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    padding: 10px 50px;
+    background: #191919;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 2px solid black ;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff; /* Adjust this color as needed */
+  }
+  
+  .logo-image {
+    width: 30px; /* Adjust the size of the logo image */
+    height: auto;
+    margin-right: 8px; /* Space between the image and the text */
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  .navbar a {
+    position: relative;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  
+  .navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+  }
+  
+  .navbar a:hover::before {
+    width: 100%;
+  }
+  
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  /* Our Plans Section Styles */
+.our-plans {
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; 
+    margin-top: 50px; 
+  }
+  .center-heading {
+    text-align: center;
+    font-size: 3.3rem;
+}
+.design-packages-heading {
+  font-size: 2.5em; /* Adjust the font size as needed */
+  margin-top: 1rem; /* Space above the heading */
+  margin-bottom: 1rem; /* Space below the heading */
+  text-align: left; /* Center the heading, if desired */
+  padding-top: 20px;
+  text-decoration: underline;
+}
+  
+  .plans-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .plan {
+    padding: 2rem;
+    background-color: #fff;
+    border: 2px solid #000;
+    text-align: left;
+    border-radius: 20px;
+    box-shadow: 0em 0.4rem 0em #adadad;
+    flex: 1; /* Flex property for equal width */
+    display: flex; /* Use flexbox to control layout */
+    flex-direction: column; /* Align children in a column */
+    justify-content: space-between; /* Ensure space between items */
+    height: auto; /* Set a fixed height for uniformity */
+  }
+  
+  .plan h3 {
+    font-size: 2rem;
+  }
+  .plan h2 {
+    font-size: 1.1rem;
+  }
+  .services-list {
+    list-style-type: disc; /* Use bullet points for list items */
+    padding-left: 20px; /* Indentation for list */
+    margin: 0.7em 0; /* Margin for spacing */
+    flex-grow: 1; /* Allow the list to grow and take space */
+  }
+  .plan-button {
+    padding: 1em 2.1em;
+    border-radius: 12px;
+    margin: 8px 0; /* Space only on top and bottom */
+    border: 2px solid black;
+    background-color: #fff;
+    color: black;
+    font-weight: 800;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0em 0.3rem 0em #adadad;
+    transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+
+
+button:hover {
+    transform: scale(0.95);
+}
+
+#contactModal{
+  /*display: none;*/
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content{
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  margin: 15% auto;
+  width: 80%;
+  max-width: 500px;
+}
+.close-button{
+  column-rule: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  margin-top: 10px;
+}
+
+input, textarea{
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* General styles for the submit button */
+button[type="submit"] {
+  padding: 1em 2.1em;
+  border-radius: 12px;
+  margin: 8px 0;
+  border: 2px solid black;
+  background-color: #fff;
+  color: black;
+  font-weight: 800;
+  font-size: 0.85;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0em 0.3em 0em #adadad;
+  transition: transform 0.3s ease,background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+}
+
+/* Hover effect for the button */
+button[type="submit"]:hover {
+  transform: scale(0.95);
+}
+
+
+
+  /*--------------------------------------------------------------------------------*/
+/* For mobile devices */
+@media (max-width: 768px) {
+    .header {
+      padding: 10px 15px; /* Adjust padding */
+    }
+  
+    .logo-image {
+      width: 20px; /* Adjust logo size */
+    }
+  
+    .navbar {
+      position: relative;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #000;
+      padding: 20px;
+      border-radius: 5px;
+      width: 200px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger-menu {
+      display: flex;
+    }
+    .hamburger-menu .bar{
+      height: 2px;
+    }
+    .our-plans {
+      padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .center-heading {
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .plans-container {
+      flex-direction: column; /* Stack plans vertically */
+      gap: 15px; /* Adjust gap between plans */
+  }
+
+  .plan {
+      height: auto; /* Allow height to adjust based on content */
+      margin: 10px 0; /* Margin between plans */
+  }
+
+  .plan h3 {
+      font-size: 1.8rem; /* Smaller font size for headings */
+  }
+
+  .plan h2 {
+      font-size: 1rem; /* Smaller font size for subheadings */
+  }
+
+  .plan-button {
+      font-size: 0.75em; /* Adjust button font size */
+      padding: 0.8em 1.5em; /* Adjust button padding */
+  }
+
+  .sub-heading {
+      font-size: 1.1em; /* Adjust subheading font size */
+  }
+
+  .design-packages-heading {
+      font-size: 2em; /* Adjust design packages heading size */
+  }
+}

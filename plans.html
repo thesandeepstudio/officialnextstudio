@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Information -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Next Studio</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SH5169TR2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1SH5169TR2');
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- links -->
+  <link rel="canonical" href="https://nextstudio-cyt.pages.dev/index.html" />
+
+
+  <!-- Main and Responsive CSS files -->
+  <link rel="stylesheet" href="plans.css">
+
+  <!-- Favicon link -->
+  <link rel="icon" href="assets/Next_Studio_logos/Next_studio_white.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/Next_Studio_logos/Next_studio_white.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="assets/Next_Studio_logos/Next_studio_white.png" alt="NEXT STUDIO Logo" class="logo-image">
+        NEXT STUDIO
+      </a>
+      <nav class="navbar">
+        <div class="nav-links">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about-us">About</a>
+          <a href="index.html#gallery">Gallery</a>
+          <a href="index.html#our-plans">Plan</a>
+          <a href="index.html#what-we-offer">Services</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="hamburger-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+      <!-- Our Plans Section -->
+    <section id="our-plans" class="our-plans">
+      <h2 class="center-heading">Our Packages</h2>
+      <h3 class="design-packages-heading">Design Packages</h3>
+      <div class="plans-container">
+        <div class="plan">
+          <h3>Basic</h3>
+          <h2>Services Included</h2>
+          <ul class="services-list">
+            <li>Logo Design</li>
+            <li>Business Card Design</li>
+            <li>Letter Head</li>
+            <li>Social Media Design</li>
+            <li>5 Custom Social Media Posts (Static Image)</li>
+            <li>Profile & Cover Design</li>
+            <li>Unlimited Revisions</li>
+          </ul>
+        
+          <button class="plan-button" id="getStartedButton">Get Started</button>
+        </div>
+        <div class="plan">
+          <h3>Standard</h3>
+          <h2>Services Included</h2>
+          <ul class="services-list">
+            <li>Logo Design or Redesign</li>
+            <li>Business Card Design</li>
+            <li>Letter Head</li>
+            <li>15 Custom Social Media Posts</li>
+            <li>Animated Graphic</li>
+            <li>Social Media Branding Kit</li>
+            <li>2 Custom Social Media Templates</li>
+            <li>Basic Website design or Redesign</li>
+            <li>Complementary Festival Post</li>
+            <li>Unlimited Revisions</li>
+            
+          </ul>
+          <button class="plan-button" id="getStartedButton">Get Started</button>
+        </div>
+        <div class="plan">
+          <h3>Premium</h3>
+          <h2>Services Included</h2>
+          <ul class="services-list">
+            <li>Full Brand Identity Development</li>
+            <li>30 Custom Social Media Posts</li>
+            <li>Animated Graphic</li>
+            <li>Short Videos</li>
+            <li>Complete Social Media Branding Kit</li>    
+            <li>Social Media ads Design</li>  
+            <li>Complete Website Design & Development</li>
+            <li>Ongoing Support & Maintenance</li>
+            <li>Complementary Festival Post</li>
+            <li>Unlimited Revisions</li>
+          </ul>
+          <button class="plan-button" id="getStartedButton">Get Started</button>
+
+        </div>
+      </div>
+      <!-- Modal Structure -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Enter Your Details</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="phone" id="phone" name="phone" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    </section>
+
+    <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>  
+
+</html>
