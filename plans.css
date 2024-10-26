@@ -94,7 +94,7 @@
   }
 
   /* Our Plans Section Styles */
-.our-plans {
+.our-packages {
     padding: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -114,13 +114,13 @@
   text-decoration: underline;
 }
   
-  .plans-container {
+  .packages-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
   }
   
-  .plan {
+  .packages {
     padding: 2rem;
     background-color: #fff;
     border: 2px solid #000;
@@ -134,11 +134,14 @@
     height: auto; /* Set a fixed height for uniformity */
   }
   
-  .plan h3 {
+  .packages h3 {
     font-size: 2rem;
   }
-  .plan h2 {
+  .packages h2 {
     font-size: 1.1rem;
+  }
+  .packages p {
+    font-size: 0.9rem;
   }
   .services-list {
     list-style-type: disc; /* Use bullet points for list items */
@@ -146,7 +149,7 @@
     margin: 0.7em 0; /* Margin for spacing */
     flex-grow: 1; /* Allow the list to grow and take space */
   }
-  .plan-button {
+  .packages-button {
     padding: 1em 2.1em;
     border-radius: 12px;
     margin: 8px 0; /* Space only on top and bottom */
@@ -167,7 +170,7 @@ button:hover {
 }
 
 #contactModal{
-  /*display: none;*/
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -286,25 +289,28 @@ button[type="submit"]:hover {
       font-size: 2.5rem; /* Adjust font size for smaller screens */
   }
 
-  .plans-container {
+  .packages-container {
       flex-direction: column; /* Stack plans vertically */
       gap: 15px; /* Adjust gap between plans */
   }
 
-  .plan {
+  .packages {
       height: auto; /* Allow height to adjust based on content */
       margin: 10px 0; /* Margin between plans */
   }
 
-  .plan h3 {
+  .packages h3 {
       font-size: 1.8rem; /* Smaller font size for headings */
   }
 
-  .plan h2 {
+  .packages h2 {
       font-size: 1rem; /* Smaller font size for subheadings */
   }
+  .packages p {
+    font-size: 0.8rem;
+  }
 
-  .plan-button {
+  .packages-button {
       font-size: 0.75em; /* Adjust button font size */
       padding: 0.8em 1.5em; /* Adjust button padding */
   }

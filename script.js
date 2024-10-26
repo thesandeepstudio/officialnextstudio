@@ -2,15 +2,12 @@
 const modal = document.getElementById('modal');
 const hamburger = document.querySelector('.hamburger-menu');
 const navLinks = document.querySelector('.nav-links');
-const getStartedButton = document.getElementById('getStartedButton');
 const contactModal = document.getElementById('contactModal');
 const closeButton = document.querySelector('.close-button');
 
 // Toggle the navigation menu
 hamburger.addEventListener('click', () => {
     const isVisible = navLinks.classList.toggle('active');
-
-    // Prevent horizontal scrolling when the menu is open
     if (isVisible) {
         document.body.style.overflow = 'hidden'; // Disable scrolling
         document.body.style.position = 'fixed'; // Keep the body in place
@@ -38,51 +35,60 @@ navLinks.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent default anchor behavior
             navLinks.classList.remove('active'); // Close the menu
             resetBodyStyle();
-            
-            // Scroll to the target element smoothly
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+            targetElement.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
         }
     }
 });
 
-// Show the contact modal when the Get Started button is clicked
-getStartedButton.addEventListener('click', () => {
-    contactModal.style.display = 'block';
-});
+// Ensure the modal behavior is specific to plans.html
+if (window.location.pathname.includes('plans.html')) {
+    // Select all 'Get Started' buttons on plans.html
+    const getStartedButtons = document.querySelectorAll('.get-started-button');
 
-// Close the contact modal when the close button is clicked
-closeButton.addEventListener('click', () => {
-    contactModal.style.display = 'none';
-});
+    // Add event listeners to each button to show the contact modal
+    getStartedButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            contactModal.style.display = 'block'; // Show the modal on button click
+        });
+    });
 
-// Close the contact modal when clicking outside of it
-window.addEventListener('click', (event) => {
-    if (event.target === contactModal) {
+    // Close the contact modal when the close button is clicked
+    closeButton.addEventListener('click', () => {
         contactModal.style.display = 'none';
+    });
+
+    // Close the contact modal when clicking outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === contactModal) {
+            contactModal.style.display = 'none';
+        }
+    });
+
+    // Handle form submission for the contact form (optional)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Retrieve values from the form
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Log values (you can send these to your server)
+            console.log({ name, email, phone, message });
+
+            // Close the modal after submission
+            contactModal.style.display = 'none';
+
+            // Clear the form (optional)
+            contactForm.reset();
+        });
     }
-});
+}
 
-// Handle form submission for the contact form (optional)
-document.getElementById('contactForm').addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Retrieve values from the form
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const message = document.getElementById('message').value;
-
-    // Log values (you can send these to your server)
-    console.log({ name, email, phone, message });
-
-    // Close the modal after submission
-    contactModal.style.display = 'none';
-
-    // Clear the form (optional)
-    document.getElementById('contactForm').reset();
-});
-
-// When the user clicks on a gallery item, open the modal
+// Handle gallery item clicks to open a separate modal
 document.addEventListener('click', event => {
     const galleryItem = event.target.closest('.gallery-item');
     if (galleryItem) {
@@ -93,7 +99,7 @@ document.addEventListener('click', event => {
     }
 });
 
-// When the user clicks anywhere outside of the modal, close it
+// Close the gallery modal when clicking anywhere outside of it
 window.addEventListener('click', event => {
     if (event.target === modal) {
         modal.style.display = 'none';
@@ -106,4 +112,13 @@ function resetBodyStyle() {
     document.body.style.overflow = ''; // Re-enable scrolling
     document.body.style.position = ''; // Reset to default position
     document.body.style.width = ''; // Reset to default width
+}
+
+// Functions for opening and closing image modals (if needed)
+function showDetails(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+}
+
+function hideDetails(modalId) {
+    document.getElementById(modalId).style.display = 'none';
 }
