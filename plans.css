@@ -170,7 +170,7 @@ button:hover {
 }
 
 #contactModal{
-  display: none;
+  /*display: none;*/
   position: fixed;
   z-index: 1;
   left: 0;
@@ -259,7 +259,7 @@ button[type="submit"]:hover {
     }
   
     .nav-links {
-      /*display: none;*/
+      display: none;
       flex-direction: column;
       gap: 10px;
       position: absolute;
