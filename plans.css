@@ -259,7 +259,7 @@ button[type="submit"]:hover {
     }
   
     .nav-links {
-      display: none;
+      /*display: none;*/
       flex-direction: column;
       gap: 10px;
       position: absolute;
