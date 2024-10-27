@@ -4,6 +4,8 @@ const hamburger = document.querySelector('.hamburger-menu');
 const navLinks = document.querySelector('.nav-links');
 const contactModal = document.getElementById('contactModal');
 const closeButton = document.querySelector('.close-button');
+const contactForm = document.getElementById('contactForm');
+const successMessage = document.getElementById('successMessage');
 
 // Toggle the navigation menu
 hamburger.addEventListener('click', () => {
@@ -52,41 +54,32 @@ if (window.location.pathname.includes('plans.html')) {
         });
     });
 
-    // Close the contact modal when the close button is clicked
-    closeButton.addEventListener('click', () => {
-        contactModal.style.display = 'none';
-    });
-
-    // Close the contact modal when clicking outside of it
-    window.addEventListener('click', (event) => {
-        if (event.target === contactModal) {
-            contactModal.style.display = 'none';
-        }
-    });
-
-    // Handle form submission for the contact form (optional)
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (event) => {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Retrieve values from the form
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-
-            // Log values (you can send these to your server)
-            console.log({ name, email, phone, message });
-
-            // Close the modal after submission
-            contactModal.style.display = 'none';
-
-            // Clear the form (optional)
-            contactForm.reset();
-        });
-    }
 }
+
+// Handle form submission for the contact form
+if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Retrieve values from the form
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Log values (you can send these to your server)
+        console.log({ name, email, message });
+
+        // Log to check if the function is executed
+        console.log('Form submitted. Displaying success message.');
+
+        // Display the success message
+        successMessage.style.display = 'block'; // Show the success message
+
+        // Clear the form
+        contactForm.reset();
+    });
+}
+
 
 // Handle gallery item clicks to open a separate modal
 document.addEventListener('click', event => {

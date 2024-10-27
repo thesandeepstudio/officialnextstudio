@@ -94,7 +94,7 @@
   }
 
   /* Our Plans Section Styles */
-.our-packages {
+  .our-packages {
     padding: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -104,7 +104,7 @@
   .center-heading {
     text-align: center;
     font-size: 3.3rem;
-}
+  }
 .design-packages-heading {
   font-size: 2.5em; /* Adjust the font size as needed */
   margin-top: 1rem; /* Space above the heading */
@@ -149,26 +149,7 @@
     margin: 0.7em 0; /* Margin for spacing */
     flex-grow: 1; /* Allow the list to grow and take space */
   }
-  .packages-button {
-    padding: 1em 2.1em;
-    border-radius: 12px;
-    margin: 8px 0; /* Space only on top and bottom */
-    border: 2px solid black;
-    background-color: #fff;
-    color: black;
-    font-weight: 800;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    text-align: center;
-    box-shadow: 0em 0.3rem 0em #adadad;
-    transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  }
-
-
-button:hover {
-    transform: scale(0.95);
-}
-
+ 
 #contactModal{
   display: none;
   position: fixed;
@@ -205,22 +186,51 @@ button:hover {
   cursor: pointer;
 }
 
-form{
-  display: flex;
-  flex-direction: column;
-}
-label{
-  margin-top: 10px;
+
+.contact-form{
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 50px;
+  box-shadow: 0em 0.4em 0em #adadad;
 }
 
-input, textarea{
-  margin-top: 5px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.contact-form h3{
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
-/* General styles for the submit button */
-button[type="submit"] {
+
+.contact-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: #555;
+  outline: none;
+}
+
+.contact-form button[type="submit"] {
   padding: 1em 2.1em;
   border-radius: 12px;
   margin: 8px 0;
@@ -228,19 +238,24 @@ button[type="submit"] {
   background-color: #fff;
   color: black;
   font-weight: 800;
-  font-size: 0.85;
+  font-size: 0.85em;
   text-transform: uppercase;
   text-align: center;
   box-shadow: 0em 0.3em 0em #adadad;
-  transition: transform 0.3s ease,background-color 0.3s, color 0.3s, box-shadow 0.3s;
-
+  transition: transform 0.3s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-/* Hover effect for the button */
-button[type="submit"]:hover {
+.contact-form button:hover[type="submit"] {
   transform: scale(0.95);
 }
 
+#successMessage {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: black+;
+}
 
 
   /*--------------------------------------------------------------------------------*/
@@ -321,5 +336,17 @@ button[type="submit"]:hover {
 
   .design-packages-heading {
       font-size: 2em; /* Adjust design packages heading size */
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .contact-form h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form button[type="submit"] {
+    font-size: 1rem;
   }
 }

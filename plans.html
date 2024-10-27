@@ -80,7 +80,6 @@
             <li>Unlimited Revisions</li>
           </ul>
         
-          <button class="packages-button get-started-button">Get Started</button>
 
         </div>
 
@@ -101,8 +100,6 @@
             <li>Unlimited Revisions</li>
           </ul>
         
-          <button class="packages-button get-started-button">Get Started</button>
-
         </div>
 
       
@@ -123,32 +120,32 @@
             <li>Complementary Festival Post</li>
             <li>Unlimited Revisions</li>
           </ul>
-          <button class="packages-button get-started-button">Get Started</button>
-
-
         </div>
       </div>
-      <!-- Modal Structure -->
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <h2>Enter Your Details</h2>
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <!-- Contact Form -->
+<div class="contact-form">
+  <h3>Contact Us for More Information</h3>
+  <form id="contactForm" method="post" action="javascript:void(0);">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
-        <label for="phone">Phone:</label>
-        <input type="phone" id="phone" name="phone" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Success Message -->
+  <div id="successMessage" style="display: none;">
+    Our team member will contact you soon.
+  </div>
+</div>
+
+
   </div>
 
     </section>
