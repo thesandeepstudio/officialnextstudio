@@ -104,15 +104,8 @@
   .center-heading {
     text-align: center;
     font-size: 3.3rem;
+    margin-bottom: 50px;
   }
-.design-packages-heading {
-  font-size: 2.5em; /* Adjust the font size as needed */
-  margin-top: 1rem; /* Space above the heading */
-  margin-bottom: 1rem; /* Space below the heading */
-  text-align: left; /* Center the heading, if desired */
-  padding-top: 20px;
-  text-decoration: underline;
-}
   
   .packages-container {
     display: flex;
@@ -127,11 +120,18 @@
     text-align: left;
     border-radius: 20px;
     box-shadow: 0em 0.4rem 0em #adadad;
+    
+  transition: transform 0.3s ease;
     flex: 1; /* Flex property for equal width */
     display: flex; /* Use flexbox to control layout */
     flex-direction: column; /* Align children in a column */
     justify-content: space-between; /* Ensure space between items */
     height: auto; /* Set a fixed height for uniformity */
+  }
+  .packages:hover{
+    
+  transform: scale(1.05);
+}
   }
   
   .packages h3 {
