@@ -1,45 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://officialnextstudio.pages.dev/index.html</loc> <!-- Main entry point -->
-        <lastmod>2024-10-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://officialnextstudio.pages.dev/home</loc> <!-- Home section -->
-        <lastmod>2024-10-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://officialnextstudio.pages.dev/about-us</loc> <!-- About Us section -->
-        <lastmod>2024-10-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://officialnextstudio.pages.dev/gallery</loc> <!-- Gallery section -->
-        <lastmod>2024-10-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://officialnextstudio.pages.dev/our-plans</loc> <!-- Our Plans section -->
-        <lastmod>2024-10-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://officialnextstudio.pages.dev/what-we-offer</loc> <!-- What We Offer section -->
-        <lastmod>2024-10-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://officialnextstudio.pages.dev/contact</loc> <!-- Contact section -->
-        <lastmod>2024-10-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://officialnextstudio.pages.dev/</loc>
+<lastmod>2024-11-20T18:50:00+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://officialnextstudio.pages.dev/plans</loc>
+<lastmod>2024-11-20T18:50:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
 </urlset>
