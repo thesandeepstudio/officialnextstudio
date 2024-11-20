@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/index.html</loc> <!-- Main entry point -->
+        <loc>https://officialnextstudio.pages.dev/index.html</loc> <!-- Main entry point -->
         <lastmod>2024-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/#home</loc> <!-- Home section -->
+        <loc>https://officialnextstudio.pages.dev/#home</loc> <!-- Home section -->
         <lastmod>2024-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/#about-us</loc> <!-- About Us section -->
+        <loc>https://officialnextstudio.pages.dev/#about-us</loc> <!-- About Us section -->
         <lastmod>2024-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/#gallery</loc> <!-- Gallery section -->
+        <loc>https://officialnextstudio.pages.dev/#gallery</loc> <!-- Gallery section -->
         <lastmod>2024-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/#our-plans</loc> <!-- Our Plans section -->
+        <loc>https://officialnextstudio.pages.dev/#our-plans</loc> <!-- Our Plans section -->
         <lastmod>2024-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/#what-we-offer</loc> <!-- What We Offer section -->
+        <loc>https://officialnextstudio.pages.dev/#what-we-offer</loc> <!-- What We Offer section -->
         <lastmod>2024-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://nextstudio-cyt.pages.dev/#contact</loc> <!-- Contact section -->
+        <loc>https://officialnextstudio.pages.dev/#contact</loc> <!-- Contact section -->
         <lastmod>2024-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
