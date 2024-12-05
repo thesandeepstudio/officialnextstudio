@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  padding: 10px 50px;
+  background: #191919;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 2px solid black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff; /* Adjust this color as needed */
+}
+
+.logo-image {
+  width: 30px; /* Adjust the size of the logo image */
+  height: auto;
+  margin-right: 8px; /* Space between the image and the text */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Gallery Section Styles */
+.gallery {
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.view-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-more-button {
+  padding: 1em 2.1em 1.1em;
+  border-radius: 12px;
+  margin: 8px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-weight: 800;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0em 0.3rem 0em #adadad;
+  transition: transform 0.3s ease, background-color 0.3s, color 0.3s,
+    box-shadow 0.3s;
+}
+
+.view-more-button:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none; /* Hide modals by default */
+  position: fixed;
+  z-index: 1000; /* Ensure modal is on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2.5px); /* Darker transparent background */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  border-radius: 10px; /* Optional: Add rounded corners to modal content */
+}
+
+/* Modal Description */
+.modal-description {
+  width: 100%;
+  color: #fff;
+  margin: 5px 0; /* Reduced top and bottom margin */
+  text-align: center; /* Center align text */
+}
+
+/* Images Container */
+.images-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 100px); /* Adjust height to fit within the modal */
+  overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Image Styling */
+.images-container img {
+  width: 80%; /* Set a consistent width for images */
+  max-width: 100%; /* Ensure images do not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+  margin-bottom: 0; /* Remove gap between images */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px; /* Ensure it’s visible and doesn’t overlap content */
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1100; /* Ensure close button is above other content */
+}
+
+/* For mobile devices */ @media (max-width: 768px) {
+  .header {
+    padding: 10px 15px; /* Adjust padding */
+  }
+
+  .logo-image {
+    width: 20px; /* Adjust logo size */
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+  .hamburger-menu .bar {
+    height: 2px;
+  }
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+  .images-container img {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0;
+  }
+
+  .modal-content {
+    min-width: 280px; /* Ensure modal is responsive on small screens */
+  }
+}
