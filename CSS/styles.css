@@ -809,6 +809,18 @@ button:hover {
     max-width: none; /* Remove max-width */
   }
 
+
+  .reviews-container {
+    flex-direction: column; /* Stack reviews vertically */
+    gap: 15px; /* Adjust gap between reviews */
+  }
+
+  .review {
+    flex: 1 1 100%; /* Full width for each review */
+    max-width: none; /* Remove max-width for stacking */
+  }
+
+  
   .gallery-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150, 1fr));
