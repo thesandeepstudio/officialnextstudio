@@ -270,6 +270,70 @@ button:hover {
   margin-bottom: 10px;
 }
 
+
+/* Customer Reviews Section Styles */
+.reviews {
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.review {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0em 0.4rem 0em #adadad;
+  transition: transform 0.3s ease;
+  flex: 1 1 calc(33.333% - 20px); /* Three reviews per row */
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  min-height: 350px;
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align content to the left */
+  text-align: left; /* Ensure left alignment */
+}
+
+.review:hover {
+  transform: scale(1.05);
+}
+
+.brand-logo {
+  max-width: 80px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  display: block;
+}
+
+.review p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #555;
+}
+
+.review h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.brand-name {
+  font-size: 1rem;
+  color: #888;
+  font-style: italic;
+}
+
+
 /* Our Plans Section Styles */
 .our-plans {
   padding: 50px;
