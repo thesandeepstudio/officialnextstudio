@@ -1,284 +1,370 @@
 /* Reset and Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Inter, sans-serif;
-  }
-  
-  body {
-    min-height: 100vh;
-    overflow-x: hidden; /* Hide horizontal scroll */
-    background-color: #fff;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
-  
-  /* Header Styles */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Hide horizontal scroll */
+  background-color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  padding: 10px 50px;
+  background: #191919;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 2px solid black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  /* Adjust this color as needed */
+}
+
+.logo-image {
+  width: 30px;
+  /* Adjust the size of the logo image */
+  height: auto;
+  margin-right: 8px;
+  /* Space between the image and the text */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: .3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Our Plans Section Styles */
+.our-packages {
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+
+.center-heading {
+  text-align: center;
+  font-size: 3.3rem;
+  margin-bottom: 50px;
+}
+
+.packages-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.packages {
+  padding: 2rem;
+  background-color: #fff;
+  border: 2px solid #000;
+  text-align: left;
+  border-radius: 20px;
+  box-shadow: 0em 0.4rem 0em #adadad;
+
+  transition: transform 0.3s ease;
+  flex: 1;
+  /* Flex property for equal width */
+  display: flex;
+  /* Use flexbox to control layout */
+  flex-direction: column;
+  /* Align children in a column */
+  justify-content: space-between;
+  /* Ensure space between items */
+  height: auto;
+  /* Set a fixed height for uniformity */
+}
+
+.packages:hover {
+
+  transform: scale(1.05);
+}
+
+
+.packages h3 {
+  font-size: 1.8rem;
+}
+
+.packages h2 {
+  font-size: 1.1rem;
+}
+
+.packages p {
+  font-size: 0.9rem;
+}
+
+.services-list {
+  list-style-type: disc;
+  /* Use bullet points for list items */
+  padding-left: 20px;
+  /* Indentation for list */
+  margin: 0.7em 0;
+  /* Margin for spacing */
+  flex-grow: 1;
+  /* Allow the list to grow and take space */
+}
+
+/* contact */
+.contact {
+  background-color: #fff;
+  /* Light background color */
+  padding: 40px 20px;
+  /* Padding around the section */
+  text-align: center;
+  /* Center align text */
+}
+
+.contact-content {
+  max-width: 800px;
+  /* Max width for content */
+  margin: 0 auto;
+  /* Center align content */
+}
+
+.contact h1 {
+  font-size: 2.5em;
+  /* Font size for heading */
+  margin-bottom: 10px;
+  /* Margin below heading */
+}
+
+.contact p {
+  font-size: 1.2em;
+  /* Font size for paragraph */
+  margin-bottom: 20px;
+  /* Margin below paragraph */
+}
+
+.gmail-section {
+  margin-bottom: 20px;
+  /* Margin below Gmail section */
+}
+
+.email-link {
+  font-size: 1.2em;
+  /* Font size for email link */
+  color: #333;
+  /* Text color for email link */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+.social-links {
+  display: flex;
+  /* Flexbox for social links */
+  justify-content: center;
+  /* Center align social links */
+  gap: 25px;
+  /* Space between social links */
+  font-size: 12px;
+}
+
+.social-link {
+  font-size: 1.5em;
+  /* Font size for social links */
+  color: #000;
+  /* Color for social links */
+  text-decoration: underline;
+  /* Remove underline */
+}
+
+.social-link:hover {
+  text-decoration: underline;
+  /* Underline on hover */
+}
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/* For mobile devices */
+@media (max-width: 768px) {
   .header {
+    padding: 10px 15px;
+    /* Adjust padding */
+  }
+
+  .logo-image {
+    width: 20px;
+    /* Adjust logo size */
+  }
+
+  .nav-links {
     position: fixed;
     top: 0;
-    left: 0;
-    height: 60px;
-    width: 100%;
-    padding: 10px 50px;
-    background: #191919;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: #191919;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    border-bottom: 2px solid black ;
+    z-index: 1000;
+    padding-top: 90px;
+    gap: 10px;
   }
-  
-  .logo {
-    display: flex;
-    align-items: center;
+
+  .nav-links a{
+    color: white;
+    font-size: 18px;
     text-decoration: none;
-    color: #fff; /* Adjust this color as needed */
+    display: block;
   }
-  
-  .logo-image {
-    width: 30px; /* Adjust the size of the logo image */
-    height: auto;
-    margin-right: 8px; /* Space between the image and the text */
+
+  .nav-links.active {
+    right: 0;
   }
-  
-  .navbar {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-links {
-    display: flex;
-  }
-  
-  .navbar a {
-    position: relative;
-    font-size: 15px;
-    color: #fff;
-    font-weight: 400;
-    text-decoration: none;
-    margin-left: 40px;
-  }
-  
-  .navbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: .3s;
-  }
-  
-  .navbar a:hover::before {
-    width: 100%;
-  }
-  
+
   .hamburger-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
   }
-  
+
   .hamburger-menu .bar {
     width: 25px;
     height: 3px;
     background-color: #fff;
     border-radius: 5px;
+    transition: 0.3s;
   }
 
-  /* Our Plans Section Styles */
-  .our-packages {
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px; 
-    margin-top: 50px; 
-  }
-  .center-heading {
-    text-align: center;
-    font-size: 3.3rem;
-    margin-bottom: 50px;
+  /* Animate bars into 'X' shape when menu is open */
+  .hamburger-menu.open .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
   }
   
-  .packages-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  .packages {
-    padding: 2rem;
-    background-color: #fff;
-    border: 2px solid #000;
-    text-align: left;
-    border-radius: 20px;
-    box-shadow: 0em 0.4rem 0em #adadad;
-    
-  transition: transform 0.3s ease;
-    flex: 1; /* Flex property for equal width */
-    display: flex; /* Use flexbox to control layout */
-    flex-direction: column; /* Align children in a column */
-    justify-content: space-between; /* Ensure space between items */
-    height: auto; /* Set a fixed height for uniformity */
-  }
-  .packages:hover{
-    
-  transform: scale(1.05);
-}
-  }
-  
-  .packages h3 {
-    font-size: 1.8rem;
-  }
-  .packages h2 {
-    font-size: 1.1rem;
-  }
-  .packages p {
-    font-size: 0.9rem;
-  }
-  .services-list {
-    list-style-type: disc; /* Use bullet points for list items */
-    padding-left: 20px; /* Indentation for list */
-    margin: 0.7em 0; /* Margin for spacing */
-    flex-grow: 1; /* Allow the list to grow and take space */
+  .hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
   }
 
-/* contact */
-.contact {
-  background-color: #fff; /* Light background color */
-  padding: 40px 20px; /* Padding around the section */
-  text-align: center; /* Center align text */
-}
-
-.contact-content {
-  max-width: 800px; /* Max width for content */
-  margin: 0 auto; /* Center align content */
-}
-
-.contact h1 {
-  font-size: 2.5em; /* Font size for heading */
-  margin-bottom: 10px; /* Margin below heading */
-}
-
-.contact p {
-  font-size: 1.2em; /* Font size for paragraph */
-  margin-bottom: 20px; /* Margin below paragraph */
-}
-
-.gmail-section {
-  margin-bottom: 20px; /* Margin below Gmail section */
-}
-
-.email-link {
-  font-size: 1.2em; /* Font size for email link */
-  color: #333; /* Text color for email link */
-  text-decoration: none; /* Remove underline */
-}
-
-.social-links {
-  display: flex; /* Flexbox for social links */
-  justify-content: center; /* Center align social links */
-  gap: 25px; /* Space between social links */
-  font-size: 12px;
-}
-
-.social-link {
-  font-size: 1.5em; /* Font size for social links */
-  color: #000; /* Color for social links */
-  text-decoration: underline; /* Remove underline */
-}
-
-.social-link:hover {
-  text-decoration: underline; /* Underline on hover */
-}
-
- 
+  .hamburger-menu.open .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
 
 
-  /*--------------------------------------------------------------------------------*/
-/* For mobile devices */
-@media (max-width: 768px) {
-    .header {
-      padding: 10px 15px; /* Adjust padding */
-    }
-  
-    .logo-image {
-      width: 20px; /* Adjust logo size */
-    }
-  
-    .navbar {
-      position: relative;
-    }
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #000;
-      padding: 20px;
-      border-radius: 5px;
-      width: 200px;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .hamburger-menu {
-      display: flex;
-    }
-    .hamburger-menu .bar{
-      height: 2px;
-    }
-    .our-plans {
-      padding: 20px; /* Reduce padding for smaller screens */
+  .our-plans {
+    padding: 20px;
+    /* Reduce padding for smaller screens */
   }
 
   .center-heading {
-      font-size: 2.5rem; /* Adjust font size for smaller screens */
+    font-size: 2.5rem;
+    /* Adjust font size for smaller screens */
   }
 
   .packages-container {
-      flex-direction: column; /* Stack plans vertically */
-      gap: 15px; /* Adjust gap between plans */
+    flex-direction: column;
+    /* Stack plans vertically */
+    gap: 15px;
+    /* Adjust gap between plans */
   }
 
   .packages {
-      height: auto; /* Allow height to adjust based on content */
-      margin: 10px 0; /* Margin between plans */
+    height: auto;
+    /* Allow height to adjust based on content */
+    margin: 10px 0;
+    /* Margin between plans */
   }
 
   .packages h3 {
-      font-size: 1.8rem; /* Smaller font size for headings */
+    font-size: 1.8rem;
+    /* Smaller font size for headings */
   }
 
   .packages h2 {
-      font-size: 1rem; /* Smaller font size for subheadings */
+    font-size: 1rem;
+    /* Smaller font size for subheadings */
   }
+
   .packages p {
     font-size: 0.8rem;
   }
 
   .packages-button {
-      font-size: 0.75em; /* Adjust button font size */
-      padding: 0.8em 1.5em; /* Adjust button padding */
+    font-size: 0.75em;
+    /* Adjust button font size */
+    padding: 0.8em 1.5em;
+    /* Adjust button padding */
   }
 
   .sub-heading {
-      font-size: 1.1em; /* Adjust subheading font size */
+    font-size: 1.1em;
+    /* Adjust subheading font size */
   }
 
   .design-packages-heading {
-      font-size: 2em; /* Adjust design packages heading size */
+    font-size: 2em;
+    /* Adjust design packages heading size */
   }
 
+}
